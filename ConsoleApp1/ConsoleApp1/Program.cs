@@ -65,6 +65,43 @@ namespace ConsoleApp1
                 Console.WriteLine($"Цена: {tour[i].price}\n");
             }
         }
+        public void Sort()
+        {
+            Console.WriteLine("Сортировка по времени и цене(убывание): \n");
+            string t1;
+            double t2;
+            int t3;
+            for (int i = 0; i < tour.Length; i++)
+            {
+                for (int s = 0; s < tour.Length - 1; s++)
+                {
+                    if (tour[s].time < tour[s + 1].time)
+                    {
+                        t1 = tour[s + 1].direction;
+                        t2 = tour[s + 1].time;
+                        t3 = tour[s + 1].price;
+                        tour[s + 1].direction = tour[s].direction;
+                        tour[s + 1].time = tour[s].time;
+                        tour[s + 1].price = tour[s].price;
+                        tour[s].direction = t1;
+                        tour[s].time = t2;
+                        tour[s].price = t3;
+                    }
+                    else if (tour[s].time == tour[s + 1].time && tour[s].price < tour[s + 1].price)
+                    {
+                        t1 = tour[s + 1].direction;
+                        t2 = tour[s + 1].time;
+                        t3 = tour[s + 1].price;
+                        tour[s + 1].direction = tour[s].direction;
+                        tour[s + 1].time = tour[s].time;
+                        tour[s + 1].price = tour[s].price;
+                        tour[s].direction = t1;
+                        tour[s].time = t2;
+                        tour[s].price = t3;
+                    }
+                }
+            }
+        }
         
     }
     class Program
@@ -73,6 +110,8 @@ namespace ConsoleApp1
         {
             TouristicAgency tourAgency = new TouristicAgency();
             tourAgency.Create();
+            tourAgency.Print();
+            tourAgency.Sort();
             tourAgency.Print();
         }
     }
