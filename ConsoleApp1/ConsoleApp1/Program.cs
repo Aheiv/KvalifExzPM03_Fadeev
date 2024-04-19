@@ -1,5 +1,6 @@
 ﻿using System;
 using System.IO;
+using System.Text;
 
 namespace ConsoleApp1
 {
@@ -102,6 +103,23 @@ namespace ConsoleApp1
                 }
             }
         }
+        public void FileCreate()
+        {
+            using (FileStream fs = File.Create("file.txt"))
+            { 
+                for (int i = 0; i < tour.Length; i++)
+                {
+                    byte[] tmp1 = Encoding.Default.GetBytes($"Направление №{i+1}: " + tour[i].direction + " ");
+                    fs.Write(tmp1);
+                    byte[] tmp2 = Encoding.Default.GetBytes($"Продолжительность №{i + 1}: " + tour[i].time.ToString()+ " ");
+                    fs.Write(tmp2);
+                    byte[] tmp3 = Encoding.Default.GetBytes($"Цена №{i + 1}: " + tour[i].price.ToString() + "\n");
+                    fs.Write(tmp3);
+                }
+
+                fs.Close();
+            }
+        }
         
     }
     class Program
@@ -113,6 +131,7 @@ namespace ConsoleApp1
             tourAgency.Print();
             tourAgency.Sort();
             tourAgency.Print();
+            tourAgency.FileCreate();
         }
     }
 }
