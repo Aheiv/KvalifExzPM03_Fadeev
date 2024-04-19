@@ -14,11 +14,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Users\\stu-pksp120\\source\\repos\\KvalifExzPM03_Fadeev\\ConsoleApp1\\ConsoleApp1\\ConsoleApp1.csproj",
+      "projectUniqueName": "D:\\Users\\stu-pksp120\\source\\repos\\KvalifExzPM03_Fadeev\\src\\ConsoleApp1\\ConsoleApp1\\ConsoleApp1.csproj",
       "projectName": "ConsoleApp1",
-      "projectPath": "D:\\Users\\stu-pksp120\\source\\repos\\KvalifExzPM03_Fadeev\\ConsoleApp1\\ConsoleApp1\\ConsoleApp1.csproj",
+      "projectPath": "D:\\Users\\stu-pksp120\\source\\repos\\KvalifExzPM03_Fadeev\\src\\ConsoleApp1\\ConsoleApp1\\ConsoleApp1.csproj",
       "packagesPath": "D:\\Users\\stu-pksp120\\.nuget\\packages\\",
-      "outputPath": "D:\\Users\\stu-pksp120\\source\\repos\\KvalifExzPM03_Fadeev\\ConsoleApp1\\ConsoleApp1\\obj\\",
+      "outputPath": "D:\\Users\\stu-pksp120\\source\\repos\\KvalifExzPM03_Fadeev\\src\\ConsoleApp1\\ConsoleApp1\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Microsoft\\Xamarin\\NuGet\\"
