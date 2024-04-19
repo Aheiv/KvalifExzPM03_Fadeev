@@ -53,6 +53,18 @@ namespace ConsoleApp1
                 tour[i] = t[i];
             }
         }
+
+        public void Print()
+        {
+            Console.WriteLine("Текущие турпоездки: \n");
+            for (int i = 0; i < tour.Length; i++)
+            {
+                Console.WriteLine($"Поездка №{i+1}");
+                Console.WriteLine($"Направление: {tour[i].direction}");
+                Console.WriteLine($"Продолжительность: {tour[i].time}");
+                Console.WriteLine($"Цена: {tour[i].price}\n");
+            }
+        }
         
     }
     class Program
@@ -61,6 +73,7 @@ namespace ConsoleApp1
         {
             TouristicAgency tourAgency = new TouristicAgency();
             tourAgency.Create();
+            tourAgency.Print();
         }
     }
 }
