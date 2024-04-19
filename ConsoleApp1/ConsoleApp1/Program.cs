@@ -33,7 +33,7 @@ namespace ConsoleApp1
                 t[i].direction = Console.ReadLine();
                 Console.Write("\nВведите продолжительность поездки(в часах): ");
                 double temp1;
-                while (!double.TryParse(Console.ReadLine(), out temp1) && temp1 > 0)
+                while (!double.TryParse(Console.ReadLine(), out temp1) && temp1 <= 0)
                 {
                     Console.WriteLine("Формат ввода неверен! Попробуйте ещё раз!");
                     Console.Write("\nВведите продолжительность поездки(в часах): ");
